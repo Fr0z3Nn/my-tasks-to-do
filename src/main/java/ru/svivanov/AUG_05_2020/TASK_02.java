@@ -1,6 +1,5 @@
 package ru.svivanov.AUG_05_2020;
 
-import java.util.ArrayList;
 import java.util.stream.IntStream;
 
 public class TASK_02 {
@@ -8,16 +7,10 @@ public class TASK_02 {
         System.out.println(solve("123 56 78"));
     }
     public static String solve(String s){
-        ArrayList<Integer> arrayList = new ArrayList<>();
-        var stringBuilder = new StringBuilder(s);
-        while (stringBuilder.toString().contains(" ")){
-            var e = stringBuilder.toString().indexOf(" ");
-            arrayList.add(e);
-            stringBuilder.deleteCharAt(e);
-            System.out.println(stringBuilder.toString());
-        }
-        stringBuilder.reverse();
-        IntStream.iterate(arrayList.size() - 1, i -> i >= 0, i -> i - 1).forEach(i -> stringBuilder.insert(arrayList.get(i), " "));
-        return stringBuilder.toString();
+        var str = new StringBuilder(s.replace(" ","")).reverse();
+        IntStream.range(0,s.length())
+                .filter(i -> s.charAt(i) == ' ')
+                .forEach(j -> str.insert(j, " "));
+        return str.toString();
     }
 }
