@@ -8,7 +8,12 @@ public class TASK_03 {
     }
     public static String twoSort(String[] s) {
         StringBuilder str = new StringBuilder();
-        Arrays.stream(s).sorted().findFirst().get().chars().forEach(i -> str.append((char)i).append("***"));
+        Arrays.stream(s)
+                .sorted()
+                .findFirst()
+                .get()
+                .chars()
+                .forEach(i -> str.append((char)i).append("***"));
         str.delete(str.length()-3,str.length());
         return str.toString();
     }
