@@ -7,6 +7,7 @@ public class TASK_03 {
         System.out.println(twoSort(new String[]{"phone", "alfa"}));
     }
     public static String twoSort(String[] s) {
+        //String.join("***",s[0].split(""))
         StringBuilder str = new StringBuilder();
         Arrays.stream(s)
                 .sorted()
