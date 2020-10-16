@@ -65,11 +65,11 @@ public class BoolVector {
 class TestBoolVector {
     public static void main(String[] args) throws Exception {
         BoolVector boolVector1 = new BoolVector(new byte[]{0, 1, 1, 1, 1, 0});
-        BoolVector boolVector2 = new BoolVector(new byte[]{0, 1, 0,});
-        //System.out.println(Arrays.toString(BoolVector.conjunction(boolVector1, boolVector2).getVector()));
-        //System.out.println(Arrays.toString(BoolVector.disjunction(boolVector1, boolVector2).getVector()));
-        //System.out.println(Arrays.toString(boolVector1.negationVector().getVector()));
-        //boolVector1.countingOnesAndZeros();
+        BoolVector boolVector2 = new BoolVector(new byte[]{0, 1, 0, 1, 1, 1});
+        System.out.println(Arrays.toString(BoolVector.conjunction(boolVector1, boolVector2).getVector()));
+        System.out.println(Arrays.toString(BoolVector.disjunction(boolVector1, boolVector2).getVector()));
+        System.out.println(Arrays.toString(boolVector1.negationVector().getVector()));
+        boolVector1.countingOnesAndZeros();
 
     }
 }
