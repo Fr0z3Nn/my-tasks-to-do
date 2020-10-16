@@ -27,14 +27,14 @@ public class QuadraticEquation {
         extremumX = -B / (2 * A);
         double y = A * extremumX * extremumX + B * extremumX + C;
         minimum = 2 * A > 0;
-        System.out.printf("extremum[x: %.2f;y: %.2f]\n",extremumX,y);
+        System.out.printf("extremum[x: %.2f;y: %.2f]\n", extremumX, y);
     }
 
     public void findIntervals() {
         if (minimum) {
-            System.out.printf("The function increases by (%.2f,+∞) decreases by (-∞,%.2f)",extremumX,extremumX);
+            System.out.printf("The function increases by (%.2f,+∞) decreases by (-∞,%.2f)", extremumX, extremumX);
         } else {
-            System.out.printf("The function increases by (-∞,%.2f) decreases by ( %.2f,+∞)",extremumX,extremumX);
+            System.out.printf("The function increases by (-∞,%.2f) decreases by ( %.2f,+∞)", extremumX, extremumX);
         }
     }
 
