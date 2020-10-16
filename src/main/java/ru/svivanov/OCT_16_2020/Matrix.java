@@ -47,13 +47,13 @@ public class Matrix {
     }
 
     public Matrix squaring() throws Exception {
-        if (width != height){
+        if (width != height) {
             throw new Exception("Matrix isn't square");
         }
         double[][] copy = new double[height][width];
-        for (int m = 0; m < matrix.length; m++){
-            for (int j = 0; j < matrix.length; j++){
-                for (int i = 0; i < matrix.length; i++){
+        for (int m = 0; m < matrix.length; m++) {
+            for (int j = 0; j < matrix.length; j++) {
+                for (int i = 0; i < matrix.length; i++) {
                     copy[m][j] += matrix[m][i] * matrix[i][j];
                 }
 
@@ -87,9 +87,9 @@ public class Matrix {
 class MainTest {
     public static void main(String[] args) throws Exception {
         Matrix[] matrices = new Matrix[]{new Matrix(3, 3), new Matrix(3, 3), new Matrix(3, 3)};
-        for(Matrix matrix : matrices){
+        for (Matrix matrix : matrices) {
             System.out.println("Matrix before:");
-            int column = (int)(Math.random() * matrix.getMatrix()[0].length);
+            int column = (int) (Math.random() * matrix.getMatrix()[0].length);
             System.out.printf("column: %d\n", column);
             matrix.printMatrix();
             matrix.reverseMinAndMaxByColumn(column);
