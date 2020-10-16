@@ -78,9 +78,7 @@ public class QuadraticEquation {
         max -= min;
         return (int) (Math.random() * ++max) + min;
     }
-}
 
-class TestRoots {
     public static void main(String[] args) {
         QuadraticEquation[] equations = new QuadraticEquation[]{new QuadraticEquation(), new QuadraticEquation(), new QuadraticEquation()};
         double maxX = Double.MIN_NORMAL;
@@ -106,3 +104,4 @@ class TestRoots {
         }
     }
 }
+

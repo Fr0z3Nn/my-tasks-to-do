@@ -81,10 +81,6 @@ public class Matrix {
         return matrix;
     }
 
-
-}
-
-class MainTest {
     public static void main(String[] args) throws Exception {
         Matrix[] matrices = new Matrix[]{new Matrix(3, 3), new Matrix(3, 3), new Matrix(3, 3)};
         for (Matrix matrix : matrices) {
@@ -103,6 +99,6 @@ class MainTest {
         matrix.squaring().printMatrix();
 
     }
-
 }
+
 

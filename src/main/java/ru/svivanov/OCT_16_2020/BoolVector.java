@@ -59,10 +59,6 @@ public class BoolVector {
         return vector;
     }
 
-
-}
-
-class TestBoolVector {
     public static void main(String[] args) throws Exception {
         BoolVector boolVector1 = new BoolVector(new byte[]{0, 1, 1, 1, 1, 0});
         BoolVector boolVector2 = new BoolVector(new byte[]{0, 1, 0, 1, 1, 1});
